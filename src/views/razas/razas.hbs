@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body id="contenedor">
+    <div class="container p-4" >
+        <div class="row" >
+            {{#each razas}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body ">
+                        <h3 class="card-title text-uppercase">
+                            {{nombre}}
+                        </h3>
+                            <img src="{{imagen}}">
+                        <h5>
+                            <p>Descripcion:</p>
+                        </h5>
+                        <p class="m-2 text-muted text-justify" >{{descripcion}}</p>
+                        <br>
+                        <h5>
+                            <p>Mejora de Caracteristica</p>
+                        </h5>
+                        <p class="text-muted">
+                            {{atributos_raciales}}
+                        </p>
+                        <br>
+                        <h5>
+                            <p>Velocidad</p>
+                        </h5>
+                        <p class="text-muted">
+                            {{velocidad}}
+                        </p>
+                        <br>
+                        <h5>
+                            <p>Tamaño</p>
+                        </h5>
+                        <p class="text-muted">
+                            {{tamano}}
+                        </p>
+                        <br>
+                        <h5>Habilidades de {{nombre}}</p>
+                        </h5>
+                        <p>
+                        <p class="text-muted">
+                            {{habilidades_especiales}}
+                        </p>
+                        <br>
+                        <h5>
+                            <p>Idiomas:</p>
+                        </h5>
+                        <p class="text-muted">
+                            {{idiomas}}
+                        </p>
+                        <br>
+                        <h5>
+                            <p>Subrazas:</p>
+                        </h5>
+                        <p class="text-muted">
+                            {{subrazas}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay razas guardadas aún.</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+
+</html>

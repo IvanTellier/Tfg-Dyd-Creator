@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body id="contenedor">
+    <div class="container p-4">
+        <div class="row">
+            {{#each personaje}}
+            <div class="col-md-3">
+                <div class="card text-center" id="card-pj">
+                    <div class="card-body">
+                        <h3>
+                            {{nombre}}
+                        </h3>
+                        <h6>
+                            {{genero}}
+                        </h6>
+                        <h3 class="card-title text-uppercase">
+                            {{nombreRaza}}
+                        </h3>
+                        <h3 class="card-title text-uppercase">
+                            {{nombreClase}}
+                        </h3>
+                         <img src="{{imagen}}">
+                        <p class="m-2">{{description}}</p>
+                        <p class="text-muted">
+                            {{timeago created_at}}
+                        </p>
+                        <table class="centered-table">
+                            <tr>
+                                <td>
+                                    <a class="btn btn-danger" href="/personajes/delete/{{id}}">
+                                        Borrar personaje
+                                    </a>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-secondary" href="/personajes/edit/{{id}}">
+                                        Modificar
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay personajes guardados todavia.</p>
+                    <a href="/personajes/add">Create uno!</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+
+</html>

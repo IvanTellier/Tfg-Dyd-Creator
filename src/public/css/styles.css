@@ -1,0 +1,105 @@
+body {
+  background: #f5f6fa;
+  font-family: 'Oswald', sans-serif;
+
+  overflow: hidden;
+}
+
+img {
+  width: 100px; 
+  height: 150px;
+}
+
+.modo-noche {
+  background-color: #333;
+}
+
+.modo-noche-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modo-noche-btn:focus {
+  outline: none;
+}
+
+.modo-noche-btn:hover {
+  color: yellow;
+}
+
+.index {
+  width: 100vw;
+  height: 100vh;
+}
+
+.navbar {
+  background: black !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.masthead {
+  color: white;
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  margin-top: -20px;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: url('/img/background.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.masthead h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+  
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+  }
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
+}
+
+#contenedor{
+  height: 900px;
+  overflow: auto;
+}
+
+.card{  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #FDF5E6; 
+  padding: 20px;
+  border: 1px solid #D2B48C; 
+  border-radius: 10px; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+#card-pj{
+  width: 274px;
+  margin: 3px;
+}
+
+.centered-table{
+  margin: 0 auto;
+}
